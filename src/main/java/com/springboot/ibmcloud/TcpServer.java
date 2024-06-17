@@ -12,7 +12,8 @@ public class TcpServer {
     private static String receivedMessage = "The song remais the same";
 
     public static void main(String[] args) {
-        int port = 30000; // Porta onde o servidor TCP estará ouvindo
+        //int port = 30000; // Porta onde o servidor TCP estará ouvindo
+    	int port = 5432; // Porta onde o servidor TCP estará ouvindo
 
         try (ServerSocket serverSocket = new ServerSocket(port)) {
             System.out.println("Servidor TCP iniciado na porta " + port);
