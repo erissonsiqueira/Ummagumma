@@ -12,8 +12,7 @@ public class TcpServer {
     private static String receivedMessage = "The song remais the same";
 
     public static void main(String[] args) {
-        //int port = 30000; // Porta onde o servidor TCP estará ouvindo
-    	int port = 5432; // Porta onde o servidor TCP estará ouvindo
+    	int port = 5432;
 
         try (ServerSocket serverSocket = new ServerSocket(port)) {
             System.out.println("Servidor TCP iniciado na porta " + port);
@@ -26,8 +25,8 @@ public class TcpServer {
                     String message;
                     while ((message = in.readLine()) != null) {
                         System.out.println("Recebido: " + message);
-                        setReceivedMessage(message); // Armazena a mensagem recebida
-                        out.println("Mensagem recebida: " + message); // Envia de volta a confirmação
+                        setReceivedMessage(message);
+                        out.println("Mensagem recebida: " + message);
                     }
                 } catch (Exception e) {
                     System.out.println("Erro na comunicação com o cliente: " + e.getMessage());
