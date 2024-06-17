@@ -8,7 +8,8 @@ public class indexController {
 	
 	@RequestMapping("/")
 	public String index(){
-		return "Is There Anybody Out There?";
+		//return "Is There Anybody Out There?";
+		return "Shine on you crazy diamond";
 	}
 
 }
